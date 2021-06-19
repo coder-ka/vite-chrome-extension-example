@@ -1,7 +1,7 @@
 {
   "private": true,
   "workspaces": [
-    "pages",
+    "ui-elements",
     "background",
     "npm-scripts"
   ]

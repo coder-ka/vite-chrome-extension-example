@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "pages",
+  "name": "ui-elements",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite build --watch",
