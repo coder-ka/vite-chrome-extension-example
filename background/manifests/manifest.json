@@ -22,5 +22,11 @@
     "48": "/images/get_started48.png",
     "128": "/images/get_started128.png"
   },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content-script.js"]
+    }
+  ],
   "options_page": "./pages/options.html"
 }
