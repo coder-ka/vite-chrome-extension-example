@@ -3,7 +3,7 @@
   "name": "npm-scripts",
   "version": "1.0.0",
   "scripts": {
-    "dev": "concurrently \"yarn workspace background dev\" \"yarn workspace pages dev\"",
+    "dev": "concurrently --restart-tries 10 \"yarn workspace background dev\" \"yarn workspace pages dev\"",
     "build": "concurrently \"yarn workspace background build\" \"yarn workspace pages build\""
   },
   "devDependencies": {
