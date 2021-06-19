@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "workspaces": [
+    "pages",
+    "background",
+    "npm-scripts"
+  ]
+}

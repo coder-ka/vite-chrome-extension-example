@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "npm-scripts",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"yarn workspace background dev\" \"yarn workspace pages dev\"",
+    "build": "concurrently \"yarn workspace background build\" \"yarn workspace pages build\""
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}
