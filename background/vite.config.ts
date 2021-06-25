@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import path from "path";
-import copy from "rollup-plugin-copy";
+import copy from "rollup-plugin-copy-watch";
 
 const outDir = path.resolve(__dirname, "../dist");
 
@@ -24,12 +24,13 @@ export default defineConfig({
   },
   plugins: [
     copy({
+      watch: `${__dirname}/manifests`,
       targets: [
         {
           src: path.join(__dirname, "manifests/*").split(path.sep).join("/"),
           dest: outDir,
         },
       ],
-    }),
+    } as any),
   ],
 });
