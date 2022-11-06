@@ -4,12 +4,8 @@ https://developer.chrome.com/docs/extensions/mv3/getstarted/
 
 ## Installtion
 
-- Install [Yarn](https://yarnpkg.com/).
-
-- Install npm dependencies.
-
 ```
-yarn
+npm i
 ```
 
 ## `dev` command
@@ -17,7 +13,7 @@ yarn
 For development.
 
 ```
-yarn workspace npm-scripts dev
+npm run -w npm-scripts dev
 ```
 
 Watcher should be started.
@@ -27,7 +23,7 @@ Watcher should be started.
 For production.
 
 ```
-yarn workspace npm-scripts build
+npm run -w npm-scripts build
 ```
 
 ## Publish
