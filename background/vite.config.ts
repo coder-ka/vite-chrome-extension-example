@@ -5,7 +5,7 @@ import copy from "rollup-plugin-copy-watch";
 const outDir = path.resolve(__dirname, "../dist");
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   build: {
     outDir,
     lib: {
@@ -24,7 +24,7 @@ export default defineConfig({
   },
   plugins: [
     copy({
-      watch: `${__dirname}/manifests`,
+      watch: mode === "development" ? `${__dirname}/manifests` : undefined,
       targets: [
         {
           src: path.join(__dirname, "manifests/*").split(path.sep).join("/"),
@@ -33,4 +33,4 @@ export default defineConfig({
       ],
     } as any),
   ],
-});
+}));
