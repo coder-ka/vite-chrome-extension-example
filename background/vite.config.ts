@@ -8,16 +8,11 @@ export default defineConfig(() => ({
   build: {
     outDir,
     lib: {
-      entry: path.resolve(__dirname, "src/background.ts"),
-      name: "background",
+      entry: path.resolve(__dirname, "src/service-worker.ts"),
+      name: "service-worker",
       formats: ["umd"],
-    },
-    rollupOptions: {
-      external: [],
-      output: {
-        // Provide global variables to use in the UMD build
-        // for externalized deps
-        globals: {},
+      fileName(format, entryName) {
+        return entryName + "." + format + ".js";
       },
     },
   },

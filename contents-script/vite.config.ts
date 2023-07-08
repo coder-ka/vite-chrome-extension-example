@@ -11,13 +11,8 @@ export default defineConfig({
       entry: path.resolve(__dirname, "src/contents-script.ts"),
       name: "contents-script",
       formats: ["umd"],
-    },
-    rollupOptions: {
-      external: [],
-      output: {
-        // Provide global variables to use in the UMD build
-        // for externalized deps
-        globals: {},
+      fileName(format, entryName) {
+        return entryName + "." + format + ".js";
       },
     },
   },
